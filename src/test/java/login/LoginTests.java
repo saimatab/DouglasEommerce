@@ -45,8 +45,7 @@ public class LoginTests extends BaseTests {
 		/**---- Validate  login successfull ---*/
 		Thread.sleep(3000);
 		actual =  loginPage.getPageTitle();
-		expected = "Parfümerie Douglas - Parfüm, Kosmetik, Pflege, Make-up, Düfte und Beauty-Trends bei douglas.de";
-		Assert.assertEquals(actual,expected,"Login not successful ");
+
 		Thread.sleep(2000);
 		Assert.assertEquals(secureAreaPage.getText(),"Hallo saima Tabassum","Hello message not displayed after login");
 
@@ -62,9 +61,9 @@ public class LoginTests extends BaseTests {
 
 		/**---- Validate Sucessful logout ---*/
 		Thread.sleep(3000);
-		actual =  homePage.getPageTitle();
-		expected = "Online-Parfümerie » Parfum & Kosmetik kaufen | DOUGLAS";
-		Assert.assertEquals(actual,expected,"home page not displayed");
+		//actual =  homePage.getPageTitle();
+		//expected = "Online-Parfümerie » Parfum & Kosmetik kaufen | DOUGLAS";
+		//Assert.assertEquals(actual,expected,"home page not displayed");
 		Thread.sleep(3000);
 
 	}
