@@ -154,6 +154,14 @@ public class ForgotPasswordPage {
 			else
 			{
 				Thread.sleep(3000);
+				
+				captchaCode=tesseract.doOCR( new File("captcha.png"));
+				
+				Thread.sleep(3000);
+
+
+				getCode().sendKeys(captchaCode);
+				Thread.sleep(3000);
 
 				System.out.println("OCR Not able to recognize the code");
 
