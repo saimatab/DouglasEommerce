@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="5" passed="5">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Douglas Login" duration-ms="153241" started-at="2020-10-21T16:15:53Z" finished-at="2020-10-21T16:18:26Z">
+    <groups>
+    </groups>
+    <test name="Login Douglas Webshop" duration-ms="153241" started-at="2020-10-21T16:15:53Z" finished-at="2020-10-21T16:18:26Z">
+      <class name="login.LoginTests">
+        <test-method status="PASS" signature="setUp()[pri:0, instance:login.LoginTests@458ad742]" name="setUp" is-config="true" duration-ms="16967" started-at="2020-10-21T16:15:36Z" finished-at="2020-10-21T16:15:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="testSuccessfulLogin()[pri:1, instance:login.LoginTests@458ad742]" name="testSuccessfulLogin" duration-ms="26802" started-at="2020-10-21T16:15:53Z" finished-at="2020-10-21T16:16:19Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testSuccessfulLogin -->
+        <test-method status="PASS" signature="testLogout()[pri:2, instance:login.LoginTests@458ad742]" name="testLogout" duration-ms="40296" started-at="2020-10-21T16:16:19Z" finished-at="2020-10-21T16:17:00Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testLogout -->
+        <test-method status="PASS" signature="testNavigateToSignIn()[pri:3, instance:login.LoginTests@458ad742]" name="testNavigateToSignIn" duration-ms="35561" started-at="2020-10-21T16:17:00Z" finished-at="2020-10-21T16:17:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testNavigateToSignIn -->
+        <test-method status="PASS" signature="testInvalidLoginCredentials()[pri:4, instance:login.LoginTests@458ad742]" name="testInvalidLoginCredentials" duration-ms="17439" started-at="2020-10-21T16:17:35Z" finished-at="2020-10-21T16:17:53Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testInvalidLoginCredentials -->
+        <test-method status="PASS" signature="testForgotPassword()[pri:5, instance:login.LoginTests@458ad742]" name="testForgotPassword" duration-ms="33120" started-at="2020-10-21T16:17:53Z" finished-at="2020-10-21T16:18:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- testForgotPassword -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:login.LoginTests@458ad742]" name="tearDown" is-config="true" duration-ms="0" started-at="2020-10-21T16:18:26Z" finished-at="2020-10-21T16:18:26Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- login.LoginTests -->
+    </test> <!-- Login Douglas Webshop -->
+  </suite> <!-- Douglas Login -->
+</testng-results>

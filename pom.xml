@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>Douglas</groupId>
+    <artifactId>Douglas_Ecommerce</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  <name>douglas</name>
+  <url>http://maven.apache.org</url>
+
+
+
+    <build>
+  
+  <resources>
+      <resource>
+        <directory>src/main/java/resources</directory>
+      </resource>
+    </resources>
+  
+  
+  <plugins>
+      <plugin>
+ 
+    <groupId>org.apache.maven.plugins</groupId>
+    <artifactId>maven-surefire-plugin</artifactId>
+    <version>3.0.0-M5</version>
+
+        <configuration>
+       
+          <suiteXmlFiles>
+            <suiteXmlFile>testNG.xml</suiteXmlFile>
+          </suiteXmlFiles>
+        </configuration>
+      </plugin>
+</plugins>
+  </build>
+
+
+    <dependencies>
+
+      <dependency>
+            <groupId>net.sourceforge.lept4j</groupId>
+            <artifactId>lept4j</artifactId>
+            <version>1.6.4</version>
+        </dependency>
+    <dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-api</artifactId>
+			<version>1.7.25</version>
+		</dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-chrome-driver</artifactId>
+            <version>3.141.59</version>
+        </dependency>
+       <dependency>
+             <groupId>org.seleniumhq.selenium</groupId>
+             <artifactId>selenium-support</artifactId>
+             <version>3.141.59</version>
+        </dependency>
+                <dependency>
+            <groupId>net.sourceforge.tess4j</groupId>
+        <artifactId>tess4j</artifactId>
+          <version>3.4.8</version>
+        </dependency>
+        
+             <dependency>
+    <groupId>org.apache.pdfbox</groupId>
+    <artifactId>pdfbox</artifactId>
+    <version>2.0.21</version>
+</dependency>
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.14.3</version>
+            <scope>test</scope>
+        </dependency>
+
+    </dependencies>
+    
+   
+
+</project>

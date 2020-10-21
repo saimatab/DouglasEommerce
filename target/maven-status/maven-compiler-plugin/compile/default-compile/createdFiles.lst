@@ -1,0 +1,6 @@
+pages\SecureAreaPage.class
+pages\CommonFunctions.class
+pages\ForgotPasswordPage.class
+pages\LoginPage.class
+pages\CommonFunctions$1.class
+pages\HomePage.class
