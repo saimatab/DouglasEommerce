@@ -38,7 +38,7 @@ public class LoginTests extends BaseTests {
 		/**---- Accept Cookie Consent ---*/
 
 
-
+           loginPage.acceptCookieConsent();
 		/**---- Login Douglas Webshop ---*/
 		secureAreaPage =  loginPage.login("saima.tabassum@arpatech.com","Goodluck1@");
 
