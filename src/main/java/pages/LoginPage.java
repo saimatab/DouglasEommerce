@@ -15,6 +15,11 @@ public class LoginPage {
 	private By invalidCredentialsAlert= By.xpath("//span[contains(normalize-space(),'Ihre Eingabedaten sind leider fehlerhaft, stimmen')]");
 	private By cookieConsent = By.id("uc-btn-accept-banner");
 	CommonFunctions commonfunctions;
+	private By emptyusername= By.xpath("//div[@data-ui-name='formFieldInput'][1]//span[contains(text(),'E-Mail Adresse: Bitte füllen Sie das Feld aus.')]");
+	private By emptypassword= By.xpath("//div[@data-ui-name='formFieldInput'][2]//span[contains(text(),'Passwort: Bitte füllen Sie das Feld aus.')]");
+	
+	
+	
 	String alertText;
 	public WebDriverWait wait;
 	public LoginPage(WebDriver driver){
@@ -28,7 +33,12 @@ public class LoginPage {
 	public void setPassword(String password){
 		driver.findElement(passwordField).sendKeys(password);
 	}
-
+	public void ePassword(String password){
+		driver.findElement(passwordField).sendKeys(password);
+	}
+	public void eusername(String password){
+		driver.findElement(passwordField).sendKeys(password);
+	}
 
 
 	public LoginPage acceptCookieConsent() throws InterruptedException{
@@ -51,6 +61,23 @@ public class LoginPage {
 		return alertText;
 
 	}
+	
+	public String getemptyunalert(){
+
+		commonfunctions=new CommonFunctions(driver);
+		alertText=commonfunctions.getText(emptyusername);
+		return alertText;
+
+	}
+	
+	public String getemptypwdalert(){
+
+		commonfunctions=new CommonFunctions(driver);
+		alertText=commonfunctions.getText(emptypassword);
+		return alertText;
+
+	}
+	
 	public ForgotPasswordPage clickForgotPasswordButton(){
 		driver.findElement(resetPasswordButton).click();
 		return new ForgotPasswordPage(driver);
@@ -64,7 +91,12 @@ public class LoginPage {
 		Thread.sleep(5000);
 		return new SecureAreaPage(driver);
 	}
-
+	public void loginEmptyEntries() throws InterruptedException{
+	
+		driver.findElement(loginButton).click();
+		Thread.sleep(5000);
+	}
+	
 
 	public String getPageTitle(){
 

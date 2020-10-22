@@ -37,7 +37,7 @@ public class LoginTests extends BaseTests {
 
 		/**---- Accept Cookie Consent ---*/
 
-		loginPage.acceptCookieConsent();
+
 
 		/**---- Login Douglas Webshop ---*/
 		secureAreaPage =  loginPage.login("saima.tabassum@arpatech.com","Goodluck1@");
@@ -45,7 +45,7 @@ public class LoginTests extends BaseTests {
 		/**---- Validate  login successfull ---*/
 		Thread.sleep(3000);
 		actual =  loginPage.getPageTitle();
-
+	
 		Thread.sleep(2000);
 		Assert.assertEquals(secureAreaPage.getText(),"Hallo saima Tabassum","Hello message not displayed after login");
 
@@ -59,12 +59,9 @@ public class LoginTests extends BaseTests {
 		homePage= secureAreaPage.logout();
 
 
-		/**---- Validate Sucessful logout ---*/
+
 		Thread.sleep(3000);
-		//actual =  homePage.getPageTitle();
-		//expected = "Online-Parfümerie » Parfum & Kosmetik kaufen | DOUGLAS";
-		//Assert.assertEquals(actual,expected,"home page not displayed");
-		Thread.sleep(3000);
+	
 
 	}
 	@Test(priority=3,enabled=true)
@@ -88,6 +85,25 @@ public class LoginTests extends BaseTests {
 	public void testInvalidLoginCredentials() throws InterruptedException, IOException{
 
 
+		
+	/**---- Empty Entries ---*/
+	
+
+		loginPage.acceptCookieConsent();
+
+		loginPage.loginEmptyEntries();
+		Thread.sleep(3000);
+		actual =  loginPage.getemptyunalert();
+		expected = "E-Mail Adresse: Bitte füllen Sie das Feld aus.";
+		Assert.assertEquals(actual,expected,"empty username Error not displayed");
+		Thread.sleep(3000);
+		
+		
+		String actual1 =  loginPage.getemptypwdalert();
+	String 	expected1 = "Passwort: Bitte füllen Sie das Feld aus.";
+		Assert.assertEquals(actual1,expected1,"empty password Error not displayed");
+		Thread.sleep(3000);
+		
 		/**---- Give incorrect credentials---*/
 
 		loginPage.login("saima.tabassum@arpatech.com","Goodluck1@3");
@@ -98,7 +114,12 @@ public class LoginTests extends BaseTests {
 		actual =  loginPage.getAlertText();
 		expected = "Ihre Eingabedaten sind leider fehlerhaft, stimmen Benutzername und Passwort?";
 		Assert.assertEquals(actual,expected,"Invalid Credentials Error not displayed");
-		Thread.sleep(3000);
+
+ 
+
+	
+		
+		
 	}
 	@Test(priority=5,enabled=true)
 	public void testForgotPassword() throws InterruptedException, IOException, TesseractException{
