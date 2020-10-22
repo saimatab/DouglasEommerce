@@ -18,8 +18,9 @@ public class LoginPage {
 	//private By emptyusername= By.xpath("//div[@data-ui-name='formFieldInput'][1]//span[contains(text(),'E-Mail Adresse: Bitte füllen Sie das Feld aus.')]");
 	//private By emptypassword= By.xpath("//div[@data-ui-name='formFieldInput'][2]//span[contains(text(),'Passwort: Bitte füllen Sie das Feld aus.')]");
 	
-	private By emptyusername= By.xpath("//div[@data-ui-name='formFieldInput'][1]//span");
-	private By emptypassword= By.xpath("//div[@data-ui-name='formFieldInput'][2]//span");
+	private By emptyusername= By.xpath("//div[@data-ui-name='formFieldInput'][1]//span[contains(text(),'Sie das Feld aus.')]");
+	private By emptypassword= By.xpath("//div[@data-ui-name='formFieldInput'][2]//span[contains(text(),'Sie das Feld aus.')]");
+	
 	
 	String alertText;
 	public WebDriverWait wait;

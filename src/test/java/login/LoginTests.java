@@ -85,23 +85,45 @@ public class LoginTests extends BaseTests {
 	public void testInvalidLoginCredentials() throws InterruptedException, IOException{
 
 
-		
 	/**---- Empty Entries ---*/
 	
 
-	
+		
 
 		loginPage.loginEmptyEntries();
 		Thread.sleep(3000);
-		actual =  loginPage.getemptyunalert();
-		expected = "E-Mail Adresse: Bitte füllen Sie das Feld aus.";
+		//actual =  loginPage.getemptyunalert();
+		//expected = "E-Mail Adresse: Bitte füllen Sie das Feld aus.";
 		Assert.assertEquals(actual,expected,"empty username Error not displayed");
 		Thread.sleep(3000);
-		
-		
+		actual =  loginPage.getemptyunalert();
+		expected = "Sie das Feld aus.";
+		if(actual.contains(expected))
+		{
+			
+			assertTrue(true);
+		}
+		else
+		{
+			
+			assertTrue(false);
+		}
 		String actual1 =  loginPage.getemptypwdalert();
-	String 	expected1 = "Passwort: Bitte füllen Sie das Feld aus.";
-		Assert.assertEquals(actual1,expected1,"empty password Error not displayed");
+	String 	expected1 = "Sie das Feld aus.";
+		if(actual1.contains(expected1))
+		{
+			
+			assertTrue(true);
+		}
+		else
+		{
+			
+			assertTrue(false);
+		}
+		
+		
+		
+		
 		Thread.sleep(3000);
 		
 		/**---- Give incorrect credentials---*/
@@ -115,9 +137,9 @@ public class LoginTests extends BaseTests {
 		expected = "Ihre Eingabedaten sind leider fehlerhaft, stimmen Benutzername und Passwort?";
 		Assert.assertEquals(actual,expected,"Invalid Credentials Error not displayed");
 
- 
-
 	
+	
+		
 		
 		
 	}
