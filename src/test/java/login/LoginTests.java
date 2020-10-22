@@ -89,7 +89,7 @@ public class LoginTests extends BaseTests {
 	/**---- Empty Entries ---*/
 	
 
-		loginPage.acceptCookieConsent();
+	
 
 		loginPage.loginEmptyEntries();
 		Thread.sleep(3000);
